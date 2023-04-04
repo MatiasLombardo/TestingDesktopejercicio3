@@ -26,7 +26,6 @@ public class Ejercicio1Guia8Banco {
     
     public static void main(String[] args) {
         
-        System.out.println("Amelia estuvo aquí");
         
         CuentaBancariaService cbs = new CuentaBancariaService();
         Scanner leer = new Scanner(System.in).useDelimiter("\n");
@@ -72,3 +71,4 @@ public class Ejercicio1Guia8Banco {
 
 //probando github desktop
 //Buen día
+//Hola buen día!
