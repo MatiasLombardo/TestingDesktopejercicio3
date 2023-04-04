@@ -19,5 +19,8 @@ public class Eje3GUIA8Persona {
        
         System.out.println(ps.calcularIMC(p1));
     }
+    
+   
+    
 
 }

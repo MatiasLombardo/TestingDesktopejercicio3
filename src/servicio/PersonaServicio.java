@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-/*En el paquete Servicios crear PersonaServicio con los siguientes 3 métodos:
+ /*En el paquete Servicios crear PersonaServicio con los siguientes 3 métodos:
 Método esMayorDeEdad(): indica si la persona es mayor de edad. La función devuelve 
 un booleano.
 Metodo crearPersona(): el método crear persona, le pide los valores de los atributos 
@@ -23,46 +23,45 @@ tiene sobrepeso, y la función devuelve un 1.
 A continuación, en la clase main hacer lo siguiente:
 Crear 4 objetos de tipo Persona con distintos valores, a continuación, llamaremos todos los métodos para cada objeto, deberá comprobar si la persona está en su peso ideal, tiene sobrepeso o está por debajo de su peso ideal e indicar para cada objeto si la persona es mayor de edad.
 Por último, guardaremos los resultados de los métodos calcularIMC y esMayorDeEdad en distintas variables(arrays), para después calcular un porcentaje de esas 4 personas cuantas están por debajo de su peso, cuantas en su peso ideal y cuantos, por encima, y también calcularemos un porcentaje de cuantos son mayores de edad y cuantos menores. Para esto, podemos crear unos métodos adicionales.
-*/
-
+ */
 package servicio;
 
 import entidades.Persona;
 import java.util.Scanner;
+
 /**
  *
  * @author leandro
  */
 public class PersonaServicio {
-    
-    public Persona crearPersona(){
+
+    public Persona crearPersona() {
         Scanner leer = new Scanner(System.in).useDelimiter("\n");
         System.out.println("Ingrese su nombre");
-        String nombre=leer.next();
+        String nombre = leer.next();
         System.out.println("Ingrese su edad");
-        int edad=leer.nextInt();
+        int edad = leer.nextInt();
         System.out.println("Ingrese su sexo. Por favor digite H,M u O según corresponda");
-        String sexo=leer.next();
-        while (!sexo.equalsIgnoreCase("h")&&!sexo.equalsIgnoreCase("o")&&!sexo.equalsIgnoreCase("m")){
+        String sexo = leer.next();
+        while (!sexo.equalsIgnoreCase("h") && !sexo.equalsIgnoreCase("o") && !sexo.equalsIgnoreCase("m")) {
             System.out.println("Sexo no valido, por favor digite H,M u O según corresponda");
-            sexo=leer.next();
+            sexo = leer.next();
         }
         System.out.println("Ingrese su eso en kilogramos");
-        double peso=leer.nextDouble();
+        double peso = leer.nextDouble();
         System.out.println("Ingrese su altura en metros");
-        double altura=leer.nextDouble();
-        
-        return new Persona(nombre,edad,sexo,peso,altura);
+        double altura = leer.nextDouble();
+
+        return new Persona(nombre, edad, sexo, peso, altura);
     }
-    
-    
-    public double calcularIMC(Persona persona){
+
+    public double calcularIMC(Persona persona) {
         double imc = (double) persona.getPeso() / Math.pow(persona.getAltura(), 2);
-        if (imc < 20){
+        if (imc < 20) {
             System.out.println("La persona " + persona.getNombre() + " está por"
                     + " debajo del peso ideal.");
             return -1;
-        } else if (imc > 25 ){
+        } else if (imc > 25) {
             System.out.println("La persona " + persona.getNombre() + " está por"
                     + " encima del peso ideal.");
             return 1;
@@ -70,7 +69,18 @@ public class PersonaServicio {
             System.out.println("La persona " + persona.getNombre() + " está en su peso ideal");
             return 0;
         }
-        
-    }
-    
+    }    
+         
+
+        public boolean mayorEdad(Persona persona) {
+        if (persona.getEdad() > 17) {
+            System.out.println("Es mayor de edad");
+            return true;
+        } else {
+            System.out.println("Es menor de edad");
+            return false;
+        }
+        }
+
+
 }
