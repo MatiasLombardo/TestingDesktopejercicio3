@@ -27,10 +27,33 @@ Por último, guardaremos los resultados de los métodos calcularIMC y esMayorDeE
 
 package servicio;
 
+import entidades.Persona;
+import java.util.Scanner;
 /**
  *
  * @author leandro
  */
 public class PersonaServicio {
+    
+    public Persona crearPersona(){
+        Scanner leer = new Scanner(System.in);
+        System.out.println("Ingrese su nombre");
+        String nombre=leer.next();
+        System.out.println("Ingrese su edad");
+        int edad=leer.nextInt();
+        System.out.println("Ingrese su sexo. Por favor digite H,M u O según corresponda");
+        String sexo=leer.next();
+        while (!sexo.equalsIgnoreCase("h")||!sexo.equalsIgnoreCase("o")||!sexo.equalsIgnoreCase("m")){
+            System.out.println("Sexo no valido, por favor digite H,M u O según corresponda");
+            sexo=leer.next();
+        }
+        System.out.println("Ingrese su eso en kilogramos");
+        double peso=leer.nextDouble();
+        System.out.println("Ingrese su altura en metros");
+        double altura=leer.nextDouble();
+        
+        return new Persona(nombre,edad,sexo,peso,altura);
+    }
+    
     
 }
