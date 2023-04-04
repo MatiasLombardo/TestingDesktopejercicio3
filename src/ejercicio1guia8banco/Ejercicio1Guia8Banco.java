@@ -25,6 +25,9 @@ Método consultarDatos: permitirá mostrar todos los datos de la cuenta.
 public class Ejercicio1Guia8Banco {
     
     public static void main(String[] args) {
+        
+        System.out.println("Amelia estuvo aquí");
+        
         CuentaBancariaService cbs = new CuentaBancariaService();
         Scanner leer = new Scanner(System.in).useDelimiter("\n");
         CuentaBancaria c1 = cbs.crearCuenta();
