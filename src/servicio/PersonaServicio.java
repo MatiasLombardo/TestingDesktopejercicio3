@@ -36,14 +36,14 @@ import java.util.Scanner;
 public class PersonaServicio {
     
     public Persona crearPersona(){
-        Scanner leer = new Scanner(System.in);
+        Scanner leer = new Scanner(System.in).useDelimiter("\n");
         System.out.println("Ingrese su nombre");
         String nombre=leer.next();
         System.out.println("Ingrese su edad");
         int edad=leer.nextInt();
         System.out.println("Ingrese su sexo. Por favor digite H,M u O según corresponda");
         String sexo=leer.next();
-        while (!sexo.equalsIgnoreCase("h")||!sexo.equalsIgnoreCase("o")||!sexo.equalsIgnoreCase("m")){
+        while (!sexo.equalsIgnoreCase("h")&&!sexo.equalsIgnoreCase("o")&&!sexo.equalsIgnoreCase("m")){
             System.out.println("Sexo no valido, por favor digite H,M u O según corresponda");
             sexo=leer.next();
         }
@@ -55,5 +55,22 @@ public class PersonaServicio {
         return new Persona(nombre,edad,sexo,peso,altura);
     }
     
+    
+    public double calcularIMC(Persona persona){
+        double imc = (double) persona.getPeso() / Math.pow(persona.getAltura(), 2);
+        if (imc < 20){
+            System.out.println("La persona " + persona.getNombre() + " está por"
+                    + " debajo del peso ideal.");
+            return -1;
+        } else if (imc > 25 ){
+            System.out.println("La persona " + persona.getNombre() + " está por"
+                    + " encima del peso ideal.");
+            return 1;
+        } else {
+            System.out.println("La persona " + persona.getNombre() + " está en su peso ideal");
+            return 0;
+        }
+        
+    }
     
 }

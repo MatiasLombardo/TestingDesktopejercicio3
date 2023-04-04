@@ -16,6 +16,8 @@ public class Eje3GUIA8Persona {
     public static void main(String[] args) {
        PersonaServicio ps = new PersonaServicio();
        Persona p1=ps.crearPersona();
+       
+        System.out.println(ps.calcularIMC(p1));
     }
 
 }
