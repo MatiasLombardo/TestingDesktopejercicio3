@@ -70,7 +70,7 @@ public class PersonaServicio {
             System.out.println("La persona " + persona.getNombre() + " está en su peso ideal");
             return 0;
         }
-        
+        //asdasdasd
     }
     
 }
