@@ -4,11 +4,10 @@
  * and open the template in the editor.
  */
 
-/*Realizar una clase llamada Persona en el paquete de entidades que tengan los
+ /*Realizar una clase llamada Persona en el paquete de entidades que tengan los
 siguientes atributos: nombre, edad, sexo (‘H’ para hombre, ‘M’ para mujer, ‘O’
 para otro), peso y altura. Si desea añadir algún otro atributo, puede hacerlo
 . Agregar constructores, getters y setters.*/
-
 package entidades;
 
 /**
@@ -16,9 +15,10 @@ package entidades;
  * @author leandro
  */
 public class Persona {
-     private String nombre;
+
+    private String nombre;
     private int edad;
-    private String sexo; 
+    private String sexo;
     private double peso;
     private double altura;
 
@@ -78,5 +78,4 @@ public class Persona {
         return "Persona{" + "nombre=" + nombre + ", edad=" + edad + ", sexo=" + sexo + ", peso=" + peso + ", altura=" + altura + '}';
     }
 
-   
 }
