@@ -78,5 +78,5 @@ public class Persona {
         return "Persona{" + "nombre=" + nombre + ", edad=" + edad + ", sexo=" + sexo + ", peso=" + peso + ", altura=" + altura + '}';
     }
 //estuve aqui
-    
+    //quiero llevar esto al main
 }
