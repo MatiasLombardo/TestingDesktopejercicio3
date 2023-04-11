@@ -1,12 +1,16 @@
+package entities;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
 
-package ejercicioextra1guia8raices;
-import services.RaicesServicio;
 
+/**
+ *
+ * @author lomba
+ */
 /*
 Vamos a realizar una clase llamada Raices, donde representaremos los valores de una ecuación de 2º grado. 
 Tendremos los 3 coeficientes como atributos, llamémosles a, b y c. Hay que insertar estos 3 valores para construir 
@@ -26,23 +30,46 @@ posibles soluciones que tiene nuestra ecuación con los métodos obtenerRaices()
 nuestros métodos y en caso de no existir solución, se mostrará un mensaje.
 Nota: Fórmula ecuación 2o grado: (-b±√((b^2)-(4*a*c)))/(2*a) Solo varía el signo delante de -b
 */
-
-
-public class EjercicioExtra1Guia8Raices {
-
+public class Raices {
     
-    public static void main(String[] args) {
-            RaicesServicio r1 = new RaicesServicio();
-            RaicesServicio r2 = new RaicesServicio();
-            RaicesServicio r3 = new RaicesServicio();
-            
-            r1.inicializarRaiz();
-            r2.inicializarRaiz();
-            r3.inicializarRaiz();
-            r1.calcular();
-            r2.calcular();
-            r3.calcular();
-   
-           }
+    private double a,b,c;
 
+    public Raices() {
+    }
+
+    public Raices(double a, double b, double c) {
+        this.a = a;
+        this.b = b;
+        this.c = c;
+    }
+
+    public double getA() {
+        return a;
+    }
+
+    public double getB() {
+        return b;
+    }
+
+    public double getC() {
+        return c;
+    }
+
+    public void setA(double a) {
+        this.a = a;
+    }
+
+    public void setB(double b) {
+        this.b = b;
+    }
+
+    public void setC(double c) {
+        this.c = c;
+    }
+    
+    
+    
+    
+    
+    
 }
