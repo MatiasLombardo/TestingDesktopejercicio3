@@ -85,6 +85,6 @@ public class Eje3GUIA8Persona {
 
         System.out.println("El porcentaje de personas mayores de edad es del %" + ((porcentajeMayores / 4) * 100));
         System.out.println("El porcentaje de personas menores de edad es del %" + ((porcentajeMenores / 4) * 100));
-
+// soy pro a
     }
 }
